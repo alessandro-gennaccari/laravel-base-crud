@@ -7,6 +7,5 @@
 
         <h1 class="text-center">Tutto sui tuoi film preferiti</h1>
 
-
     </main>
 @endsection
