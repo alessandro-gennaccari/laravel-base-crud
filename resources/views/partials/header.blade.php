@@ -11,7 +11,7 @@
                 <a class="nav-link" aria-current="page" href="{{ Route('homepage') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Film</a>
+                <a class="nav-link" href="{{ Route('film.index') }}">Film</a>
               </li>
             </ul>
           </div>
