@@ -19427,6 +19427,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+console.log('Ci sono anche io qui (Faccina sorridente)');
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
