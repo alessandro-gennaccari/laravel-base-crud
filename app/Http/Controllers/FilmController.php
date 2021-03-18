@@ -36,6 +36,13 @@ class FilmController extends Controller
     public function store(Request $request)
     {
         $addFilm = new Film();
+
+        $addFilm->fill($request->all());
+        $addFilm->save();
+
+        return redirect()->route('film.index');
+
+
     }
 
     /**
