@@ -18,7 +18,7 @@ class CreateFilmsTable extends Migration
             $table->string('name');
             $table->string('genre', 30);
             $table->string('director', 100);
-            $table->date('year');
+            $table->year('year');
             $table->timestamps();
         });
     }
