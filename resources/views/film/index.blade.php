@@ -7,7 +7,10 @@
 
         <h1 class="text-center">Infromazioni film</h1>
 
-        <h3 class="p-2">Lista Film</h3>
+        <h3>Lista Film</h3>
+        <div class="pb-3 text-right">
+            <a class="btn btn-success" href="{{ Route('film.create') }}" role="button">Aggiungi</a>
+        </div>
         <table class="table table-dark table-striped">
             <thead>
                 <tr>
