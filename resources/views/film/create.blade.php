@@ -8,7 +8,9 @@
     <h1 class="text-center mb-5">Aggiunta film</h1>
 
     <div class="container">
-        <form>
+        <form action="{{Route('film.store')}}" method="post">
+            @csrf
+            @method('POST')
             <div class="mb-3">
                 <label for="inputname" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="inputname">
