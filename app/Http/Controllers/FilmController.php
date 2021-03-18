@@ -35,7 +35,7 @@ class FilmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $addFilm = new Film();
     }
 
     /**
