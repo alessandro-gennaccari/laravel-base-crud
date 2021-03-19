@@ -29,8 +29,8 @@
                     <td>{{ $film->year }}</td>
                     <td>{{ $film->genre }}</td>
                     <td>
-                        <a class="btn btn-success" href="{{ Route('film.show', ['film' => $film->id]) }}">View</a>
-                        <a class="btn btn-warning" href="{{ Route('film.edit', ['film' => $film->id]) }}">Edit</a>
+                        <a class="btn btn-success" href="{{ Route('film.show', $film->id) }}">View</a>
+                        <a class="btn btn-warning" href="{{ Route('film.edit',  $film->id) }}">Edit</a>
                     </td>
                 </tr>
                 @endforeach
