@@ -26,9 +26,14 @@
                     <td>{{ $info->director }}</td>
                     <td>{{ $info->year }}</td>
                     <td>{{ $info->genre }}</td>
-                    <td>
+                    <td class="w-25">
                         <a class="btn btn-info" href="{{ Route('film.index') }}">Back</a>
                         <a class="btn btn-warning" href="{{ Route('film.edit',  $info->id) }}">Edit</a>
+                        <form class="d-inline-block" method="post" action="{{ Route('film.destroy', $info->id) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
                     </td>
                 </tr>
             </tbody>

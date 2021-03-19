@@ -29,6 +29,11 @@
             </div>
             <a class="btn btn-info" href="{{ Route('film.index') }}">Back</a>
             <button type="submit" class="btn btn-warning">Edit</button>
+            <form class="d-inline-block" method="post" action="{{ Route('film.destroy', $edit->id) }}">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger">Delete</button>
+            </form>
         </form>
     </div>
 </main>
