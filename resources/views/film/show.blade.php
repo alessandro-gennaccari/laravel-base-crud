@@ -26,7 +26,10 @@
                     <td>{{ $info->director }}</td>
                     <td>{{ $info->year }}</td>
                     <td>{{ $info->genre }}</td>
-                    <td><a class="btn btn-warning" href="{{ Route('film.index') }}">Back</a></td>
+                    <td>
+                        <a class="btn btn-info" href="{{ Route('film.index') }}">Back</a>
+                        <a class="btn btn-warning" href="{{ Route('film.edit',  $info->id) }}">Edit</a>
+                    </td>
                 </tr>
             </tbody>
         </table>

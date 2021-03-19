@@ -27,6 +27,7 @@
                 <label for="inputyear" class="form-label">Anno</label>
                 <input type="text" class="form-control" id="inputyear" placeholder="YYYY" name="year" value="{{$edit->year}}">
             </div>
+            <a class="btn btn-info" href="{{ Route('film.index') }}">Back</a>
             <button type="submit" class="btn btn-warning">Edit</button>
         </form>
     </div>
