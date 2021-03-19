@@ -70,7 +70,13 @@ class FilmController extends Controller
      */
     public function edit(Film $film)
     {
-        //
+        if($film){
+
+            return view('film.edit', ['edit' => $film]);
+            
+        }
+
+        abort('404');
     }
 
     /**
