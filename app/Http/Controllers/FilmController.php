@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Film;
+// Validation Unique Update
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class FilmController extends Controller
 {
@@ -34,9 +37,17 @@ class FilmController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $addFilm = new Film();
+    {   
 
+        $request->validate([
+            'name' => 'required|unique:films|max:255',
+            'genre' => 'required|max:30',
+            'director' => 'required|max:100',
+            'year' => 'required|max:4'
+        ]);
+        
+        $addFilm = new Film();
+        
         $addFilm->fill($request->all());
         $addFilm->save();
 
@@ -88,6 +99,17 @@ class FilmController extends Controller
      */
     public function update(Request $request, FIlm $film)
     {
+        $request->validate([
+            'name' => [
+                'required',
+                Rule::unique('films')->ignore($film),
+                'max:255'
+            ],
+            'genre' => 'required|max:30',
+            'director' => 'required|max:100',
+            'year' => 'required|max:4'
+        ]);
+
         $film->update($request->all());
 
         return redirect()->route('film.index');

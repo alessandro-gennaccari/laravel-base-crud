@@ -8,6 +8,15 @@
     <h1 class="text-center mb-5">Modifica film</h1>
 
     <div class="container">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{Route('film.update', $edit->id)}}" method="post">
             @csrf
             @method('PUT')

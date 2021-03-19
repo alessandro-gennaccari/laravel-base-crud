@@ -8,6 +8,15 @@
     <h1 class="text-center mb-5">Aggiunta film</h1>
 
     <div class="container">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <form action="{{Route('film.store')}}" method="post">
             @csrf
             @method('POST')
