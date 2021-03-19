@@ -86,9 +86,11 @@ class FilmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, FIlm $film)
     {
-        //
+        $film->update($request->all());
+
+        return redirect()->route('film.index');
     }
 
     /**
