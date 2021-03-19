@@ -26,7 +26,7 @@
                     <td>{{ $info->director }}</td>
                     <td>{{ $info->year }}</td>
                     <td>{{ $info->genre }}</td>
-                    <td><a class="text-warning" href="{{ Route('film.index') }}">Back</a></td>
+                    <td><a class="btn btn-warning" href="{{ Route('film.index') }}">Back</a></td>
                 </tr>
             </tbody>
         </table>
