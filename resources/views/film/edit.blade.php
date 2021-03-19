@@ -6,7 +6,6 @@
 <main class="p-5">
 
     <h1 class="text-center mb-5">Modifica film</h1>
-
     <div class="container">
         @if ($errors->any())
             <div class="alert alert-danger">
