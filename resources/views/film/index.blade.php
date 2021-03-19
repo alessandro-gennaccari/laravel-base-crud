@@ -18,7 +18,6 @@
                     <th scope="col">Name</th>
                     <th scope="col">Date</th>
                     <th scope="col">Genre</th>
-                    <th scope="col">Info</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,7 +27,7 @@
                     <td>{{ $film->name }}</td>
                     <td>{{ $film->year }}</td>
                     <td>{{ $film->genre }}</td>
-                    <td class="w-25">
+                    <td class="text-right">
                         <a class="btn btn-success" href="{{ Route('film.show', $film->id) }}">View</a>
                         <a class="btn btn-warning" href="{{ Route('film.edit',  $film->id) }}">Edit</a>
                         <form class="d-inline-block" method="post" action="{{ Route('film.destroy', $film->id) }}">

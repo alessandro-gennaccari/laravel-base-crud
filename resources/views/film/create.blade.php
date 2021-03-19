@@ -23,7 +23,7 @@
                 <label for="inputdirector" class="form-label">Regia</label>
                 <input type="text" class="form-control" id="inputdirector" name="director">
             </div>
-            <div class="mb-3">
+            <div class="mb-5">
                 <label for="inputyear" class="form-label">Anno</label>
                 <input type="text" class="form-control" id="inputyear" placeholder="YYYY" name="year">
             </div>
