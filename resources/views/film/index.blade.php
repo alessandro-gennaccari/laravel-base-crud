@@ -11,6 +11,16 @@
         <div class="pb-3 text-right">
             <a class="btn btn-success" href="{{ Route('film.create') }}" role="button">Aggiungi</a>
         </div>
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+        @endif
+        @if (session('delete'))
+        <div class="alert alert-danger">
+            {{ session('delete') }}
+        </div>
+        @endif
         <table class="table table-dark table-striped">
             <thead>
                 <tr>

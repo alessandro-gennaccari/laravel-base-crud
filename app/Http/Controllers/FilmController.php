@@ -51,7 +51,7 @@ class FilmController extends Controller
         $addFilm->fill($request->all());
         $addFilm->save();
 
-        return redirect()->route('film.index');
+        return redirect()->route('film.index')->with('status', 'Aggiunto Correttamente');
 
 
     }
@@ -112,7 +112,7 @@ class FilmController extends Controller
 
         $film->update($request->all());
 
-        return redirect()->route('film.index');
+        return redirect()->route('film.index')->with('status', 'Editato Correttamente');
     }
 
     /**
@@ -125,6 +125,6 @@ class FilmController extends Controller
     {
         $film->delete();
         
-        return redirect()->route('film.index');
+        return redirect()->route('film.index')->with('delete', 'Eliminato');
     }
 }
