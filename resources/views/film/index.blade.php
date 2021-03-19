@@ -5,7 +5,7 @@
 @section('content')
     <main class="p-5">
 
-        <h1 class="text-center">Infromazioni film</h1>
+        <h1 class="text-center">Informazioni film</h1>
 
         <h3>Lista Film</h3>
         <div class="pb-3 text-right">
@@ -28,9 +28,14 @@
                     <td>{{ $film->name }}</td>
                     <td>{{ $film->year }}</td>
                     <td>{{ $film->genre }}</td>
-                    <td>
+                    <td class="w-25">
                         <a class="btn btn-success" href="{{ Route('film.show', $film->id) }}">View</a>
                         <a class="btn btn-warning" href="{{ Route('film.edit',  $film->id) }}">Edit</a>
+                        <form class="d-inline-block" method="post" action="{{ Route('film.destroy', $film->id) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
