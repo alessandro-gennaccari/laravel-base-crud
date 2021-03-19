@@ -23,17 +23,17 @@
                 <label for="inputdirector" class="form-label">Regia</label>
                 <input type="text" class="form-control" id="inputdirector" name="director" value="{{$edit->director}}">
             </div>
-            <div class="mb-3">
+            <div class="mb-5">
                 <label for="inputyear" class="form-label">Anno</label>
                 <input type="text" class="form-control" id="inputyear" placeholder="YYYY" name="year" value="{{$edit->year}}">
             </div>
             <a class="btn btn-info" href="{{ Route('film.index') }}">Back</a>
             <button type="submit" class="btn btn-warning">Edit</button>
-            <form class="d-inline-block" method="post" action="{{ Route('film.destroy', $edit->id) }}">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn-danger">Delete</button>
-            </form>
+        </form>
+        <form class="mt-4" method="post" action="{{ Route('film.destroy', $edit->id) }}">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger">Delete</button>
         </form>
     </div>
 </main>
