@@ -125,6 +125,6 @@ class FilmController extends Controller
     {
         $film->delete();
         
-        return redirect()->route('film.index')->with('delete', 'Eliminato');
+        return redirect()->route('film.index')->with('delete', 'Eliminato Definitivamente');
     }
 }
